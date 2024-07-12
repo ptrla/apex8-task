@@ -24,6 +24,9 @@ down: ## Stop the docker hub
 sh: ## Connect to the PHP FPM container
 	@$(PHP_CONT) sh
 
+test: ## run unit tests
+	@$(PHP_CONT) php bin/phpunit
+
 ## —— Symfony 🎵 ———————————————————————————————————————————————————————————————
 sf: ## List all Symfony commands or pass the parameter "c=" to run a given command, example: make sf c=about
 	@$(eval c ?=)

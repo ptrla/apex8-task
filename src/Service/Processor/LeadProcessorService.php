@@ -13,11 +13,7 @@ class LeadProcessorService implements ProcessorInterface
 
     public function process(Lead $lead): void
     {
-        if ($this->isScrap($lead)) {
-            $lead->setIsScrap(true);
-        } else {
-            $lead->setIsScrap(false);
-        }
+        $lead->setIsScrap($this->isScrap($lead));
 
         $this->entityManager->persist($lead);
         $this->entityManager->flush();
