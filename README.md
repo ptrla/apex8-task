@@ -5,6 +5,7 @@ You'll need [Docker](https://docs.docker.com/desktop/) and the tool that allows 
 ### Getting started
 
 1. Run `make start` to build images and spin up containers.
+3. Run tests `make test`
 2. Make a POST request to  `localhost/api/lead/process` with following payload:
 
 ```json
